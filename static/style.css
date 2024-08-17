@@ -1,0 +1,84 @@
+
+
+body{
+    background-color: orange;
+    font-family: "Roboto", sans-serif;
+    color: navy;
+    text-align: center;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.game-section{
+    display: flex;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+
+.card{
+    border:solid 5px navy;
+    height: 50vh;
+    width: 50vh;
+    background-color: gold;
+    box-shadow: gray 10px 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column ;
+    gap: 3px;
+}
+
+#main-card{
+    flex: 50%;
+}
+
+.main-img img{
+    height: 50vh;
+    
+}
+
+.stats{
+    display: flex;
+    background-color: orange;
+    height: 3rem;
+    padding: 0px 5px;
+   
+}
+
+
+.btn-container{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.guess{
+    height: 2rem;
+    width: 30vh;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn{
+    height: 2rem;
+    width: 20vh;
+    border-radius: 10px;
+    border: none;
+    background-color:gold ;
+    color: navy;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.btn:hover{
+    background-color: gray;
+    color: white;
+}

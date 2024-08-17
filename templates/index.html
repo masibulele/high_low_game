@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href={{url_for('static', filename='style.css')}}>
+    <title>Game by the numbers</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Guess the number</h1>
+            <h3>Between {{defaults["lower_limit"]}} and {{defaults["upper_limit"]}}</h3>
+            <h4>You have a maximum of {{defaults["max_attempts"]}} attempts</h4>
+
+        </div>
+        <div class="game-section">
+            <div class="card" id="main-card">
+                <div class="main-img">
+                    <img src="{{url_for('static', filename='img/question.png')}}" alt="question-mark">
+                </div>
+
+
+            </div>
+            <div class="card" >
+                <h1 id="game-message">
+                    Try to guess a number Between {{defaults["lower_limit"]}} and {{defaults["upper_limit"]}}
+                </h1>
+                
+            </div>
+            <div class="card">
+                <h3>
+                    Game stats
+                </h3>
+                <div class="stats">
+                    <h5>Attempts: </h5>
+                    <h3><span id="attempts">0</span>/{{defaults["max_attempts"]}}</h3> 
+                </div>
+                
+                <div class="stats">
+                    <h5>Your Guess: </h5>
+                    <h3 id="user-guess">#</h3> 
+                </div>
+                <div class="stats">
+                    <h5>Wins: </h5>
+                    <h3 id="wins">0</h3> 
+                </div>
+                <div class="stats">
+                    <h5>Win Streak: </h5>
+                    <h3>0</h3> 
+                </div>
+            </div>
+            
+        </div>
+        <div class="btn-container">
+            <div class="btns">
+                <input type="text" class="guess" placeholder="Guess the number" id="text-input">
+            </div>
+            <div class="btns">
+                <button class="btn" onclick="handleClick()">Submit Guess</button>
+            </div>
+            <div class="btns">
+                <button class="btn" onclick="handleQuit()">Quit</button>
+            </div> 
+        </div>
+    </div>
+
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
